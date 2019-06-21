@@ -41,5 +41,3 @@ $lang = array_merge($lang, array(
 	'ACP_USER_UTILS'				=> 'User utilities',
 	'LOG_USER_POST_COUNT_RESET'		=> '<strong>Reset post count for %1$s</strong><br>» from %2$s to %3$s',
 ));
-
-?>

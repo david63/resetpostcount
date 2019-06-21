@@ -13,8 +13,6 @@ use phpbb\extension\base;
 
 class ext extends base
 {
-	const RESET_POST_COUNT_VERSION	= '2.1.0';
-
 	/**
 	* Enable extension if phpBB version requirement is met
 	*
@@ -24,7 +22,7 @@ class ext extends base
 	* @access public
 	*/
 	public function is_enableable()
- 	{
+	{
 		// Requires phpBB 3.2.0 or newer.
 		$is_enableable = phpbb_version_compare(PHPBB_VERSION, '3.2.0', '>=');
 
@@ -43,5 +41,5 @@ class ext extends base
 		}
 
 		return $is_enableable;
- 	}
+	}
 }

@@ -141,7 +141,7 @@ class admin_controller implements admin_interface
 						$errors[] = $this->language->lang('ERROR_RESET_GREATER');
 					}
 
-					if(!count($errors))
+					if(!count ($errors))
 					{
 						$new_post_count = ($reset_zero) ? 0 : $reset_value;
 
@@ -200,7 +200,7 @@ class admin_controller implements admin_interface
 						}
 					}
 
-					if(!count($errors))
+					if(!count ($errors))
 					{
 						$confirm = true;
 
