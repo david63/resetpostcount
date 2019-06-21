@@ -1,0 +1,23 @@
+imports:
+     - { resource: phpbb_tables.yml }
+
+services:
+    david63.resetpostcount.admin.controller:
+        class: david63\resetpostcount\controller\admin_controller
+        arguments:
+            - '@config'
+            - '@request'
+            - '@dbal.conn'
+            - '@template'
+            - '@user'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+            - '@language'			
+            - '@log'
+            - '@david63.resetpostcount.core.functions'
+            - '%tables%'
+
+    david63.resetpostcount.core.functions:
+        class: david63\resetpostcount\core\functions
+        arguments:
+            - '@ext.manager'

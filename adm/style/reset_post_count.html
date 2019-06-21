@@ -1,0 +1,64 @@
+{% include '@' ~ NAMESPACE ~ '/head_panel.html' %}
+
+<form id="reset_post_count" method="post" action="{{ U_ACTION }}">
+	<fieldset>
+		{% if S_CONFIRM %}
+			<legend>{{ lang('RESET_USER_DETAILS') }}</legend>
+			<dl>
+				<dt><label for="reset_value">{{ lang('RESET_VALUE') }}{{ lang('COLON') }}</label><br><span>{{ lang('RESET_VALUE_EXPLAIN') }}</span></dt>
+				<dd>
+					<input class="textbox" name="reset_value" type="text" id="reset_value" size="5" maxlength="10" />
+				</dd>
+			</dl>
+
+			<dl>
+				<dt><label>{{ lang('OR_ZERO') }}</label></dt>
+			</dl>
+
+			<dl>
+				<dt><label for="reset_zero">{{ lang('RESET_ZERO') }}{{ lang('COLON') }}</label><br><span>{{ lang('RESET_ZERO_EXPLAIN') }}</span></dt>
+				<dd>
+					<span class="checkbox">
+						<input type="checkbox">
+						<input type="checkbox" name="reset_zero" id="reset_zero" />
+						<label data-on="✔" data-off="✘"></label>
+					</span>
+				</dd>
+			</dl>
+		{% else %}
+			<dl>
+				<dt><label for="reset_username">{{ lang('RESET_USERNAME') }}{{ lang('COLON') }}</label><br><span>{{ lang('RESET_USERNAME_EXPLAIN') }}</span></dt>
+				<dd>
+					<input class="textbox" type="text" id="reset_username" name="reset_username" size="25" maxlength="255" />
+				</dd>
+				<dd>
+					[ <a href="{{ U_FIND_USERNAME }}" onclick="find_username(this.href); return false;">{{ lang('FIND_USERNAME') }}</a> ]
+				</dd>
+			</dl>
+
+			<hr>
+
+			<dl>
+				<dt><label for="overide">{{ lang('RESET_OVERIDE') }}{{ lang('COLON') }}</label><br><span>{{ lang('RESET_OVERIDE_EXPLAIN') }}</span></dt>
+				<dd>
+					<span class="checkbox">
+						<input type="checkbox">
+						<input type="checkbox" name="overide" id="overide" />
+						<label data-on="✔" data-off="✘"></label>
+					</span>
+				</dd>
+			</dl>
+		{% endif %}
+	</fieldset>
+
+	<fieldset>
+		<p class="submit-buttons">
+			<input class="adm-button" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+			<input class="adm-button" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+		</p>
+		{{ S_FORM_TOKEN }}
+		{{ S_HIDDEN_FIELDS }}
+	</fieldset>
+</form>
+
+{% include '@' ~ NAMESPACE ~ '/donate.html' %}
