@@ -100,8 +100,9 @@ class admin_controller implements admin_interface
 	*/
 	public function reset_post_count()
 	{
-		// Add the language file
+		// Add the language files
 		$this->language->add_lang('acp_resetpostcount', $this->functions->get_ext_namespace());
+		$this->language->add_lang('acp_common', $this->functions->get_ext_namespace());
 
 		// Create a form key for preventing CSRF attacks
 		$form_key = 'reset_post_count';
@@ -217,7 +218,11 @@ class admin_controller implements admin_interface
 		}
 
 		// Template vars for header panel
+		$version_data	= $this->functions->version_check();
+
 		$this->template->assign_vars(array(
+			'DOWNLOAD'			=> (array_key_exists('download', $version_data)) ? '<a class="download" href =' . $version_data['download'] . '>' . $this->language->lang('NEW_VERSION_LINK') . '</a>' : '',
+
 			'ERROR_TITLE'		=> $this->language->lang('WARNING'),
 			'ERROR_DESCRIPTION'	=> implode('<br>', $errors),
 
@@ -227,10 +232,9 @@ class admin_controller implements admin_interface
 			'NAMESPACE'			=> $this->functions->get_ext_namespace('twig'),
 
 			'S_BACK'			=> $back,
-			'S_ERROR'			=> (count($errors)) ? true : false,
-			'S_VERSION_CHECK'	=> $this->functions->version_check(),
+			'S_VERSION_CHECK'	=> (array_key_exists('current', $version_data)) ? $version_data['current'] : false,
 
-			'VERSION_NUMBER'	=> $this->functions->get_this_version(),
+			'VERSION_NUMBER'	=> $this->functions->get_meta('version'),
 		));
 
 		$this->template->assign_vars(array(

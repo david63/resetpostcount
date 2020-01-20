@@ -43,9 +43,6 @@ $lang = array_merge($lang, array(
 	'ERROR_NO_USER_SPECIFIED'		=> 'No user has been selected.',
 	'ERROR_RESET_GREATER'			=> 'The reset value is greater than the user’s post count.',
 
-	'NEW_VERSION'					=> 'New Version',
-	'NEW_VERSION_EXPLAIN'			=> 'There is a newer version of this extension available.',
-
 	'OR_ZERO'						=> '--- OR ---',
 
 	'RESET_OVERIDE'					=> 'Overide errors',
@@ -61,16 +58,4 @@ $lang = array_merge($lang, array(
 	'RESET_ZERO_EXPLAIN'			=> 'Selecting this will reset the user’s post count to zero.<br><strong>Note:</strong> Selecting this will overwrite any value entered in the <strong>Reset value</strong> field.',
 
 	'USER_POST_COUNT_RESET'			=> 'Successfully reset post count for <strong>%1$s</strong> from %2$s to %3$s.',
-
-	'VERSION'						=> 'Version',
-));
-
-// Donate
-$lang = array_merge($lang, array(
-	'DONATE'					=> 'Donate',
-	'DONATE_EXTENSIONS'			=> 'Donate to my extensions',
-	'DONATE_EXTENSIONS_EXPLAIN'	=> 'This extension, as with all of my extensions, is totally free of charge. If you have benefited from using it then please consider making a donation by clicking the PayPal donation button opposite - I would appreciate it. I promise that there will be no spam nor requests for further donations, although they would always be welcome.',
-
-	'PAYPAL_BUTTON'				=> 'Donate with PayPal button',
-	'PAYPAL_TITLE'				=> 'PayPal - The safer, easier way to pay online!',
 ));

@@ -7,6 +7,7 @@ Adds an ACP option to allow the resetting of a user's post count.
 [![Latest Stable Version](https://poser.pugx.org/david63/resetpostcount/v/stable)](https://packagist.org/packages/david63/resetpostcount)
 [![Latest Unstable Version](https://poser.pugx.org/david63/resetpostcount/v/unstable)](https://packagist.org/packages/david63/resetpostcount)
 [![Total Downloads](https://poser.pugx.org/david63/resetpostcount/downloads)](https://packagist.org/packages/david63/resetpostcount)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7b2e269b5f940a8a42b8aa82be35424)](https://www.codacy.com/manual/david63/resetpostcount?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=david63/resetpostcount&amp;utm_campaign=Badge_Grade)
 
 ## Minimum Requirements
 * phpBB 3.2.0
@@ -29,4 +30,4 @@ Adds an ACP option to allow the resetting of a user's post count.
 ## License
 [GNU General Public License v2](http://opensource.org/licenses/GPL-2.0)
 
-© 2019 - David Wood
+© 2020 - David Wood
