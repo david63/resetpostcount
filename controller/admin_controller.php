@@ -101,8 +101,7 @@ class admin_controller implements admin_interface
 	public function reset_post_count()
 	{
 		// Add the language files
-		$this->language->add_lang('acp_resetpostcount', $this->functions->get_ext_namespace());
-		$this->language->add_lang('acp_common', $this->functions->get_ext_namespace());
+		$this->language->add_lang(array('acp_resetpostcount', 'acp_common'), $this->functions->get_ext_namespace());
 
 		// Create a form key for preventing CSRF attacks
 		$form_key = 'reset_post_count';
@@ -118,7 +117,7 @@ class admin_controller implements admin_interface
 
 		$back		= false;
 		$confirm	= false;
-		$errors		= $hidden_fields = array();
+		$errors		= $hidden_fields = [];
 
 		// Submit
 		if ($this->request->is_set_post('submit'))
